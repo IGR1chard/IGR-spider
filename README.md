@@ -52,18 +52,26 @@ content_text = '\n'.join([p_tag.get_text(strip=True) for p_tag in content_tag]) 
 此函数用于将txt名称转化为阿拉伯数字用于排序，例如：
 
 第1章 开篇
+
 第2章 中间
+
 第4章 后记
+
 第三章 最后
+
 windows 文件夹排序是先数字后汉字，因此将第三章改为第3章，这样可以获得以下排序，用于后续合并
 第1章 开篇
+
 第2章 中间
+
 第3章 最后
+
 第4章 后记
+
 2.extract_arabic_number(file_name) 
 
 此函数用于提取章节序号（阿拉伯数字）
 
 3.merge_files(input_directory, output_file_path) # input_directory为txt文件目录output_file_path为输出文件
 
-此函数将txt文件按章节排序，整合为一个整体，并且每章前添加章节名称，导入各种阅读软件时自动生成目录
+此函数将txt文件按章节排序（PS：可以添加章节缺失检测），整合为一个整体，并且每章前添加章节名称，导入各种阅读软件时自动生成目录
